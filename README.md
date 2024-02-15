@@ -27,18 +27,22 @@
 4. Parcel
 
    - Purpose: Bundler
-   - Reason: - HMR (Hot Module Reload) - JavaScript compiler, CSS transformer (in Rust) 10-20x Faster - Beautiful Diagnostics with detail - Builds code in parallel, multi-code - Caches Build, same code never build twice  
-      - Lazy Loading - Tree Shaking - Differential Bundling - Transpiling using Babel
-     <br/>
+   - Reason: - HMR (Hot Module Reload) - JavaScript compiler, CSS transformer (in Rust) 10-20x Faster - Beautiful Diagnostics with detail - Builds code in parallel, multi-code - Caches Build, same code never build twice
+     - Lazy Loading - Tree Shaking - Differential Bundling - Transpiling using Babel
+       <br/>
 
 5. Jest
    - Purpose: Testing Library
 
-# Getting Started with Create React App
+## 2. Building Wireframe
+
+![image](https://github.com/akj2018/YouTube-Clone/assets/43956935/851748d3-85a0-420f-80dd-06a7d84e6968)
+
+## 3. Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 4. Available Scripts
 
 In the project directory, you can run:
 
