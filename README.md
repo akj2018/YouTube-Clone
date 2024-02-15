@@ -1,3 +1,39 @@
+# YouTube Clone
+
+## 1. Requirements Clarification
+
+### Features to Implement
+
+### Tech Stack (with Justification
+
+1. Redux
+
+   - Purpose: For State Management
+   - Reason: - Centralized state management - Scalability for Large Scale Applications - Predictable state changes due to Unidirectional Data Flow
+     <br/>
+
+2. Tailwind
+
+- Purpose: For Styling
+- Reason: - HTML and CSS in one file - Pre-built utility classes for productivity and consistency - Scalability and Mobile-first - More Customization than Boostrap - Performance benifits: Only includes required CSS, not entire framework
+  <br/>
+
+3. Router
+
+   - Purpose: For Routing
+   - Reason: - Routing Library for SPA (no page refresh) - Declarative routing - Nested routing (for complex cases) - Dynamic Routing (render diff. components based on URL parameters)
+     <br/>
+
+4. Parcel
+
+   - Purpose: Bundler
+   - Reason: - HMR (Hot Module Reload) - JavaScript compiler, CSS transformer (in Rust) 10-20x Faster - Beautiful Diagnostics with detail - Builds code in parallel, multi-code - Caches Build, same code never build twice  
+      - Lazy Loading - Tree Shaking - Differential Bundling - Transpiling using Babel
+     <br/>
+
+5. Jest
+   - Purpose: Testing Library
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
