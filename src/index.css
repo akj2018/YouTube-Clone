@@ -19,3 +19,11 @@ html {
   scrollbar-color: #b5b5b5 #000000;
   scrollbar-width: thin;
 }
+
+.sidebar {
+  scrollbar-color: #000000 #000000;
+}
+
+.sidebar:hover {
+  scrollbar-color: #b5b5b5 #000000;
+}

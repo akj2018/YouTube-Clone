@@ -1,5 +1,5 @@
 import { IoLogoChrome } from "react-icons/io";
-import getViewsCount from "../utils/getViewsCount";
+import getCount_K_M from "../utils/getCount_K_M";
 import getPassedTime from "../utils/getPassedTime";
 import getDuration from "../utils/getDuration";
 
@@ -33,7 +33,7 @@ const VideoCard = ({ info }) => {
         <h2 className="text-gray-400 font-semibold">{channelTitle}</h2>
         <div>
           <span className="text-gray-400 font-semibold">
-            {getViewsCount(viewCount)} views
+            {getCount_K_M(viewCount)} views
           </span>
           <span className="text-gray-400 mx-1">•</span>
           <span className="text-gray-400 font-semibold">

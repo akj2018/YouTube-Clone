@@ -28,14 +28,35 @@ import { PiLightbulbBold } from "react-icons/pi";
 import { GiHanger } from "react-icons/gi";
 import { MdOutlinePodcasts } from "react-icons/md";
 import { SiPodcastindex } from "react-icons/si";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { useDispatch } from "react-redux";
+import { toggleSidebar } from "../utils/appSlice";
 import SidebarBtn from "./SidebarBtn";
 
-const Sidebar = () => {
+const SidebarV2 = () => {
+  const dispatch = useDispatch();
   const isSidebarOpen = useSelector((store) => store.app.isSidebarOpen);
+
+  const toggleSidebarhandler = () => {
+    dispatch(toggleSidebar());
+  };
 
   return (
     isSidebarOpen && (
-      <div className="sidebar w-[15%] bg-black text-white px-4 pr-12 grow-0 shrink-0 sticky top-0 overflow-y-auto max-h-[calc(100vh-4.3rem)]">
+      <div className="sidebar w-[15%] bg-black text-white px-4 pr-12 top-0 absolute z-20 overflow-y-auto max-h-full">
+        <div className="flex items-center h-[3.9rem] py-2 px-2 mb-4">
+          <RxHamburgerMenu
+            onClick={toggleSidebarhandler}
+            className="h-8 mr-4 cursor-pointer text-white"
+            size={"1.5rem"}
+          />
+          <img
+            className="h-[1.4rem] ml-4"
+            alt="youtube-icon"
+            src="https://www.edigitalagency.com.au/wp-content/uploads/Youtube-logo-white-png.png"
+          />
+        </div>
+
         <div className="border-b-zinc-600 border-b ">
           <ul className="flex flex-col mb-3">
             <SidebarBtn text="Home" icon={<IoHomeSharp size={"1.5rem"} />} />
@@ -203,4 +224,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SidebarV2;
