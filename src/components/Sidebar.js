@@ -35,7 +35,7 @@ const Sidebar = () => {
 
   return (
     isSidebarOpen && (
-      <div className="sidebar w-[15%] bg-black text-white px-4 pr-12 grow-0 shrink-0 sticky top-0 overflow-y-auto max-h-[calc(100vh-4.3rem)]">
+      <div className="sidebar w-[15%] bg-[#080808] text-white px-4 pr-8 grow-0 shrink-0 sticky top-0 overflow-y-auto max-h-[calc(100vh-4.3rem)] xl:block hidden">
         <div className="border-b-zinc-600 border-b ">
           <ul className="flex flex-col mb-3">
             <SidebarBtn text="Home" icon={<IoHomeSharp size={"1.5rem"} />} />

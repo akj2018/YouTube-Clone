@@ -5,6 +5,7 @@ const channelDataSlice = createSlice({
   initialState: {
     data: {},
     channelId: "",
+    playlistId: "",
   },
   reducers: {
     setData: (state, action) => {
@@ -13,8 +14,12 @@ const channelDataSlice = createSlice({
     setChannelId: (state, action) => {
       state.channelId = action.payload;
     },
+    setPlaylistId: (state, action) => {
+      state.playlistId = action.payload;
+    },
   },
 });
 
 export default channelDataSlice.reducer;
-export const { setData, setChannelId } = channelDataSlice.actions;
+export const { setData, setChannelId, setPlaylistId } =
+  channelDataSlice.actions;

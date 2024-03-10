@@ -37,7 +37,7 @@ const LiveChat = () => {
   };
 
   return (
-    <div className="rounded-xl w-full h-full bg-[#0F0F0F] text-white border border-zinc-700 flex flex-col">
+    <div className="rounded-xl w-full h-full bg-[#080808] text-white border border-zinc-700 flex flex-col">
       {/* Head */}
       <div className="flex items-center pl-5 pr-3 py-1 border-b border-zinc-700">
         <div className="text-white text-lg font-semibold">Live chat</div>

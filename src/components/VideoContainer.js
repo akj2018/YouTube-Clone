@@ -33,8 +33,10 @@ const VideoContainer = () => {
   };
 
   return (
-    <div className="flex flex-wrap justify-center gap-x-5 gap-y-10 py-5 bg-black ">
-      {videosData.length === 0 ? skeletonCardsArray() : videoCardsArray()}
+    <div className="flex flex-wrap justify-center gap-x-5 gap-y-10 py-5 bg-[#080808] ">
+      {videosData === undefined || videosData?.length === 0
+        ? skeletonCardsArray()
+        : videoCardsArray()}
     </div>
   );
 };

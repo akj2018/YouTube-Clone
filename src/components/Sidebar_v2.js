@@ -43,15 +43,15 @@ const SidebarV2 = () => {
 
   return (
     isSidebarOpen && (
-      <div className="sidebar w-[15%] bg-black text-white px-4 pr-12 top-0 absolute z-20 overflow-y-auto max-h-full">
+      <div className="sidebar w-[15%] bg-[#080808] text-white xl:px-4 top-0 absolute z-20 overflow-y-auto max-h-full xl:block hidden">
         <div className="flex items-center h-[3.9rem] py-2 px-2 mb-4">
           <RxHamburgerMenu
             onClick={toggleSidebarhandler}
-            className="h-8 mr-4 cursor-pointer text-white"
+            className="h-8 mr-4  cursor-pointer text-white"
             size={"1.5rem"}
           />
           <img
-            className="h-[1.4rem] ml-4"
+            className="h-[1.4rem] xl:ml-4"
             alt="youtube-icon"
             src="https://www.edigitalagency.com.au/wp-content/uploads/Youtube-logo-white-png.png"
           />
@@ -78,10 +78,10 @@ const SidebarV2 = () => {
         <div className="border-b-zinc-600 border-b py-2">
           <ul className="flex flex-col my-2">
             <li className="py-2 px-4 mb-1  rounded-lg cursor-pointer flex items-center hover:bg-zinc-800">
-              <div className="w-[25%] justify-self-start">
+              <div className="w-[20%] justify-self-start">
                 <span className="text-lg font-bold leading-none ">You</span>
               </div>
-              <div className="w-[75%]">
+              <div className="w-[85%]">
                 <IoIosArrowForward className="text-lg font-bold" />
               </div>
             </li>
@@ -105,7 +105,7 @@ const SidebarV2 = () => {
           </ul>
         </div>
 
-        <div className="border-b-zinc-600 border-b py-2">
+        <div className="border-b-zinc-600 border-b py-2 xl:block hidden">
           <ul className="flex flex-col my-2">
             <li className="py-2 px-4 mb-1  flex items-center">
               <span className="text-lg font-bold">More From Youtube</span>

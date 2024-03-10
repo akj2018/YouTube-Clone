@@ -9,9 +9,11 @@ const useChannelData = (channelId) => {
   }, []);
 
   const getChannelData = async () => {
-    const response = await fetch(YOUTUBE_CHANNEL_DATA_API + channelId);
-    const data = await response.json();
-    setChannelData(data);
+    if (channelId !== undefined) {
+      const response = await fetch(YOUTUBE_CHANNEL_DATA_API + channelId);
+      const data = await response.json();
+      setChannelData(data);
+    }
   };
 
   return channelData;

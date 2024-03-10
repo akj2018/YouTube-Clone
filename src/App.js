@@ -6,6 +6,7 @@ import reduxStore from "./utils/reduxStore";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import WatchPage from "./components/WatchPage";
 import MainContainer from "./components/MainContainer";
+import ErrorPage from "./components/ErrorPage";
 
 const appRouter = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const appRouter = createBrowserRouter([
         element: <WatchPage />,
       },
     ],
+    errorElement: <ErrorPage />,
   },
 ]);
 

@@ -1,6 +1,8 @@
 import { IoIosSearch } from "react-icons/io";
 import { MdMic } from "react-icons/md";
 import { FaUserCircle } from "react-icons/fa";
+import { MdOutlineVideoCall } from "react-icons/md";
+import { CiBellOn } from "react-icons/ci";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../utils/appSlice";
@@ -63,11 +65,11 @@ const Header = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 items-center px-6 bg-[#0F0F0F] shadow-lg py-2 pb-4 z-20 sticky top-0">
+    <div className="grid grid-cols-4 items-center sm:px-6 bg-[#080808] shadow-lg py-2 pb-4 z-20 sticky top-0">
       <div className="flex items-center justify-self-start col-span-1">
         <RxHamburgerMenu
           onClick={toggleSidebarhandler}
-          className="h-8 mr-4 cursor-pointer text-white"
+          className="h-8 mr-4 cursor-pointer text-white sm:block hidden"
           size={"1.5rem"}
         />
         <img
@@ -135,8 +137,10 @@ const Header = () => {
           <MdMic className="" size="1.5rem" color="white" />
         </button>
       </div>
-      <div className="col-span-1 justify-self-end mr-4">
-        <FaUserCircle color="white" size="2.5rem" />
+      <div className="col-span-1 justify-self-end mr-4 hidden sm:flex gap-x-6 items-center">
+        <MdOutlineVideoCall color="white" size="2rem" />
+        <CiBellOn color="white" size="2rem" />
+        <FaUserCircle color="white" size="2.25rem" />
       </div>
     </div>
   );

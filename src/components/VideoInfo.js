@@ -8,7 +8,11 @@ import getCurrrentDate from "../utils/getCurrentDate";
 import useChannelData from "../utils/useChannelData";
 import getCount_K_M from "../utils/getCount_K_M";
 import { YOUTUBE_CHANNEL_URL } from "../utils/constants";
-import { setData, setChannelId } from "../utils/channelDataSlice";
+import {
+  setData,
+  setChannelId,
+  setPlaylistId,
+} from "../utils/channelDataSlice";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
@@ -18,9 +22,14 @@ const VideoInfo = ({ videoData, showMore, descriptionText, setShowMore }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (channelData !== undefined) {
+    if (channelData !== undefined && Object.keys(channelData).length !== 0) {
       dispatch(setData(channelData));
       dispatch(setChannelId(channelId));
+      dispatch(
+        setPlaylistId(
+          channelData.items[0].contentDetails.relatedPlaylists.uploads
+        )
+      );
     }
   }, [channelData]);
 
@@ -37,7 +46,7 @@ const VideoInfo = ({ videoData, showMore, descriptionText, setShowMore }) => {
   const { customUrl: channelUrl } = channelData.items[0].snippet;
 
   return (
-    <div className="flex flex-col bg-[#0F0F0F]">
+    <div className="flex flex-col bg-[#080808]">
       <h1 className="text-white font-bold text-2xl">{title}</h1>
       <div className="flex my-2 items-center">
         <a
