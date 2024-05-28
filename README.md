@@ -1,5 +1,7 @@
 # YouTube Clone
 
+https://github.com/akj2018/YouTube-Clone/assets/43956935/3d34d7b3-1cd4-4117-8e41-8bf28798dcd3
+
 ## 1. Requirements Clarification
 
 ### Features to Implement
